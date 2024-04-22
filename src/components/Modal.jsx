@@ -4,7 +4,7 @@ import image1 from '../assets/seats/seat-disable.png'
 import image2 from '../assets/seats/seat-enable.png'
 import MoviesContext from '../context/MoviesProvider';
 
-const ModalComponent = ({ isOpen, onClose }) => {
+const ModalComponent = () => {
     // Definimos el número de filas y columnas de asientos
     const numRows = 10;
     const numCols = 10;
@@ -112,5 +112,6 @@ const ModalComponent = ({ isOpen, onClose }) => {
         </>
     );
 };
+
 
 export default ModalComponent;
