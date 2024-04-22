@@ -1,7 +1,4 @@
-import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Navbar from '../src/components/Navbar';
-import Carrousel from '../src/components/Carrousel';
 import Section from './components/Section';
 import MovieDetails from './components/Moviedetails';
 import { MoviesProvider } from './context/MoviesProvider';
@@ -11,7 +8,6 @@ const App = () => {
     <BrowserRouter>
       <MoviesProvider>
           <div className='text-white overflow-x-hidden'>
-              <Navbar />
              
               <main className=''>
                   <Routes>

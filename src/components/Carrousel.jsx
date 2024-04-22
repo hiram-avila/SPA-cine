@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react'
 import { BsChevronCompactLeft, BsChevronCompactRight } from 'react-icons/bs';
-import { RxDotFilled } from 'react-icons/rx';
 import image1 from '../assets/movies/cinepolis1.jpg'
 import image2 from '../assets/movies/cinepolis2.jpg'
 import image3 from '../assets/movies/cinepolis3.jpg'
@@ -52,19 +51,19 @@ const Carrousel = () => {
 
     return (
         <div className='w-screen h-[310px] relative group'>
-        <div
-            style={{
-                backgroundImage: `url(${slides[currentIndex].url})`,
-                width: '100%',
-                height: '100%',
-                backgroundSize: 'cover',
-                backgroundRepeat: 'no-repeat',
-                backgroundPosition: 'center',
-            }}
-          className='w-full h-full duration-500 pl-4 pt-72 cursor-pointer'
-          aria-label='Imagen de la película'
-        >Creditos:Cinepolis
-        </div>
+            <div
+                style={{
+                    backgroundImage: `url(${slides[currentIndex].url})`,
+                    width: '100%',
+                    height: '100%',
+                    backgroundSize: 'cover',
+                    backgroundRepeat: 'no-repeat',
+                    backgroundPosition: 'center',
+                }}
+                className='w-full h-full duration-500 pl-4 pt-72 cursor-pointer'
+                aria-label='Imagen de la película'
+            >Creditos:Cinepolis
+            </div>
             {/* Left Arrow */}
             <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl p-2 bg-black/20 text-white cursor-pointer'>
                 <BsChevronCompactLeft onClick={prevSlide} size={30} />
@@ -73,6 +72,7 @@ const Carrousel = () => {
             <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl  p-2 bg-black/20 text-white cursor-pointer'>
                 <BsChevronCompactRight onClick={nextSlide} size={30} />
             </div>
+
             <div className='flex top-4 justify-center py-2'>
                 {slides.map((slide, slideIndex) => (
                     <div
@@ -80,7 +80,6 @@ const Carrousel = () => {
                         onClick={() => goToSlide(slideIndex)}
                         className='text-2xl cursor-pointer'
                     >
-                       
                     </div>
                 ))}
             </div>

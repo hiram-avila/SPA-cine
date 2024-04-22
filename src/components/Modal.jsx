@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 
 import image1 from '../assets/seats/seat-disable.png'
 import image2 from '../assets/seats/seat-enable.png'
@@ -9,7 +9,7 @@ const ModalComponent = ({ isOpen, onClose }) => {
     const numRows = 10;
     const numCols = 10;
     // Definimos las letras para etiquetar las columnas
-    const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    const alphabet = 'ABCDEFGHIJ';
 
     // Usamos el contexto MoviesContext para acceder a los datos compartidos y funciones
     const { modalIsOpen, setModalIsOpen, selectedSeats, setSelectedSeats } = useContext(MoviesContext);
@@ -45,14 +45,14 @@ const ModalComponent = ({ isOpen, onClose }) => {
                     <div className="fixed inset-0 z-10 overflow-y-auto">
                         <div className="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
 
-                            <div className="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all  pl-5 w-1/2 h-1/2">
+                            <div className="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all  pl-24 w-auto h-1/2">
                                 <div className="bg-white px-4 pb-4 pt-5 ">
 
                                     <div className=''>
                                         <div className="flex flex-wrap gap-2">
                                             {/* Números de columna */}
-                                    <div className='w-full bg-black p-1 flex justify-center items-center mx-3'>
-                                        <p>Pantalla</p>
+                                    <div className='w-full bg-black p-1 flex justify-center items-center mx-3 '>
+                                        <p className='-tracking-tighter'>Pantalla</p>
                                     </div>
                                             <div className="w-10 h-10"></div>
                                             {Array.from({ length: numCols }).map((_, col) => (
@@ -65,12 +65,11 @@ const ModalComponent = ({ isOpen, onClose }) => {
                                         {/* Filas y asientos */}
                                         {Array.from({ length: numRows }).map((_, row) => (
                                             <div key={`row-${row}`} className="flex items-center">
-                                                <div className="w-10 h-10 flex items-center justify-center cursor-pointer text-black">
+                                                <div className="w-10 h-10 flex items-center justify-center cursor-pointer text-black font-semibold">
                                                     {alphabet.charAt(row)}
                                                 </div>
                                                 {Array.from({ length: numCols }).map((_, col) => {
                                                     const seatLabel = `${alphabet.charAt(row)}${col + 1}`;
-                                                    const isSeatOccupied = (row + col) % 2 === 0;
                                                     const isSelected = selectedSeats.includes(seatLabel);
 
                                                     return (
