@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react'
 import { BsChevronCompactLeft, BsChevronCompactRight } from 'react-icons/bs';
-import image1 from '../assets/movies/cinepolis1.jpg'
-import image2 from '../assets/movies/cinepolis2.jpg'
-import image3 from '../assets/movies/cinepolis3.jpg'
-import image4 from '../assets/movies/cinepolis4.jpg'
+import image1 from '../assets/movies/cinepolis1.webp'
+import image2 from '../assets/movies/cinepolis2.webp'
+import image3 from '../assets/movies/cinepolis3.webp'
+import image4 from '../assets/movies/cinepolis4.webp'
 
 
 const Carrousel = () => {

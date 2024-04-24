@@ -1,13 +1,13 @@
 
-import image1 from '../assets/movies/cinepolismini1.jpg'
-import image2 from '../assets/movies/cinepolismini2.jpg'
-import image3 from '../assets/movies/cinepolismini3.jpg'
-import image4 from '../assets/movies/cinepolismini4.jpg'
-import image5 from '../assets/movies/cinepolismini5.jpg'
-import image6 from '../assets/movies/cinepolismini6.jpg'
-import image7 from '../assets/movies/cinepolismini7.jpg'
-import image8 from '../assets/movies/cinepolismini8.jpg'
-import image9 from '../assets/movies/cinepolismini9.jpg'
+import image1 from '../assets/movies/cinepolismini1.webp'
+import image3 from '../assets/movies/cinepolismini3.webp'
+import image2 from '../assets/movies/cinepolismini2.webp'
+import image4 from '../assets/movies/cinepolismini4.webp'
+import image5 from '../assets/movies/cinepolismini5.webp'
+import image6 from '../assets/movies/cinepolismini6.webp'
+import image7 from '../assets/movies/cinepolismini7.webp'
+import image8 from '../assets/movies/cinepolismini8.webp'
+import image9 from '../assets/movies/cinepolismini9.webp'
 
 
 export const movies = [
